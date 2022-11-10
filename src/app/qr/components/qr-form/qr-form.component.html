@@ -1,0 +1,11 @@
+<form  [formGroup]="qrForm" autocomplete="off">
+    <mat-form-field appearance="fill">
+        <mat-label>QR string Value</mat-label>
+        <input matInput formControlName="qrvalue" >
+        <mat-hint>put your value</mat-hint>
+        <mat-error *ngIf="qrForm.get('qrvalue')?.hasError('required')">
+            is required
+         </mat-error>
+    </mat-form-field>
+    
+    </form>
